@@ -1,2 +1,4 @@
-var x=10;
+var x=2%4;
 console.log(x);
+
+
