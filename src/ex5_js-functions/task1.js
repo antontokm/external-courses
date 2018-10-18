@@ -1,0 +1,19 @@
+var Calculator={
+    add:function(a,b){
+            x=a+b;
+            console.log(x);
+        },
+    subtract:function(a,b){
+            x=a-b;
+            console.log(x);
+        },
+    divide:function(a,b){
+            x=a/b;
+            console.log(x);
+        },    
+    multiply:function(a,b){
+            x=a*b;
+            console.log(x);
+        },    
+}
+console.log(Calculator.add(1,5))
