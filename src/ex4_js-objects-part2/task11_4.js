@@ -1,12 +1,17 @@
-var f = function (str){
-    var arr= str.split("");
-    var x=0;
-        for(i=0 ; arr.length>i; ++i){
-                if (key===i){
-                ++x;
+
+var f =function(str){
+        var arr = str.split("");
+        var obj={};
+        var x=0;
+        //if ('key' in myObj)
+        for(var i in arr){
+                if (arr[i] in obj){
+                        obj[arr[i]]=obj[arr[i]]+1;
+                }else{
+                        obj[arr[i]]=1;
                 }
-                console.log("Значение",key,"repeat",x)
-            
-        }    
+                //console.log("Значение",arr[i],"Повторений",x);
+        }
+        console.log(obj)
 }
-f("aaarrttgf")
+f("artfrfaytttttddz")
