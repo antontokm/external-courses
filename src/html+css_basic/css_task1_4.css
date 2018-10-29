@@ -1,0 +1,13 @@
+p{
+    height: 200pt;
+    color:rgb(184, 7, 7);
+    font-family: 'Times New Roman';
+}
+body{
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+}
+.screen{
+    background-image: url(bumajnie-oboi.jpg);
+    height:100pt;
+    width: 300px;;
+}
