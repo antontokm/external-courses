@@ -45,3 +45,16 @@ table{
     bottom:7px;
     left:5px ;
 }
+.div7{
+    width: 200px;
+    height: 200px;
+    outline: 2px solid black;
+    background: lime;   
+    margin-bottom:20px; 
+}
+.div8{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    box-shadow: 2px 2px 0px black, -2px -2px 0px black;   
+}
