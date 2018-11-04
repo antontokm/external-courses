@@ -1,32 +1,50 @@
-div{
-    text-align:center;
-}
 .div1{
-    border:solid black 1px; 
-    height:50px;
     width: 200px;
-    padding:5px;
-    background: grey;
+    height: 50px;
+    border:1px black solid;
     border-radius:10px;
+}
+.white{
+    background:white;
+    border:1px white solid;
+    border-radius:10px;
+    width: auto;
+    height: 47px;
+}
+.grey{
+    background:grey;
+    border:1px grey solid;
+    border-radius:10px;
+    width: auto;
+    height: 46px;
 }
 .div2{
-    border:solid grey 1px; 
-    height:45px;
-    width: 195px;
-    background:linear-gradient(rgb(192, 191, 191),rgb(71, 71, 71));
-    display:inline-block;
-    border-radius:10px;
+    background:linear-gradient(rgb(219, 219, 219),rgb(143, 143, 143));
+    border:1px rgb(144, 144, 144) solid;
+    border-radius: 10px;
+    width: auto;
+    height: 38px;
+    margin:2.5px 5px 2.5px 5px;
 }
 .star1{
+    color: grey;
     float:left;
-    width:10px;
-    height:10px;
-}
-.star2{
-    width:10px;
-    height:10px;
-    float:right;
+    font-size:30px;
+    margin-left:10px;
+    position:relative;
+    top:-5px;
 }
 .word{
     float:left;
+    width:auto;
+    margin:10px 0px 10px 20px;
+
+}
+.star2{
+    color: grey;
+    float:right;
+    font-size:30px;
+    margin-right:10px;
+    position:relative;
+    top:-5px;
 }

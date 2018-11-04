@@ -1,21 +1,59 @@
-table{
-    border-collapse:collapse;
-}
-td{
-    border:1px solid black;
-    width:100px;
-    height:100px;
+.div1{
+    z-index:3;
+    background:lime;
+    height:300px;
+    width: 300px; 
     position: relative;
 }
-.block:checked::before{
-    content: '♘';
+.div2{
+    z-index:2;
+    background:rgb(2, 204, 2);
+    height:300px;
+    width: 300px;
     position: absolute;
-    text-align: center;
-    width: 50px;
-    line-height: 50px;
-    left: -5px;
-    top: 200px;
-    font-size: 40px;
-    color: red;
+    left:15px;
+    top:15px;
 }
-
+.div3{
+    z-index:1;
+    background:rgb(8, 97, 8);
+    height:300px;
+    width: 300px;
+    position: absolute;
+    left:20px;
+    top:20px;
+}
+.shadow{
+    margin-top:30px;
+    margin-bottom:30px;
+    background:lime;
+    height:300px;
+    width: 300px; 
+    box-shadow:5px 5px 0px  rgb(2, 204, 2),10px 10px 0px rgb(8, 97, 8);
+}
+.pseudo{
+    background:lime;
+    height:300px;
+    width: 300px; 
+    position:relative;
+}
+.pseudo__after::after{
+    content:"";
+    background:rgb(8, 97, 8);
+    height:300px;
+    width: 300px; 
+    position:absolute;
+    top:10px;
+    left:10px; 
+    z-index:-2;
+}
+.pseudo__before::before{
+    content:"";
+    background:rgb(2, 204, 2);
+    position:absolute;
+    height:300px;
+    width: 300px;
+    top:5px;
+    left:5px; 
+    z-index:-1;
+}
