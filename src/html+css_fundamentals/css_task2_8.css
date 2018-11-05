@@ -1,0 +1,45 @@
+body {
+    padding: 30px;
+}
+main{
+    margin-bottom:50px;
+}
+.grid{
+    display:grid;
+    grid-template-areas:
+    "site site"
+    "Title Module";
+    grid-template-rows:1fr;
+    grid-template-columns:75% 25%;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+
+}
+header {
+    background: lightblue;
+    grid-area:site;
+    justify-content: stretch;
+}
+section {
+    background: lightgreen;
+    grid-area:Title;
+}
+article {
+    background: white;
+    margin: 0 0 1rem 0;
+}
+aside {
+    background: pink;
+    grid-area:Module;
+}
+header, article, section, .module {
+    padding: 1rem;
+}
+.flex aside{
+    width:25%;
+}
+.flex section{
+    width:75%;
+}
