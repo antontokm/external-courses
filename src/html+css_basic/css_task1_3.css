@@ -1,0 +1,60 @@
+.div1{
+    background:green;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px; 
+    margin-bottom:20px;
+}
+.div2{
+    background: black;
+    height: 200px;
+    width: 200px;    
+    padding:5px;
+}
+.div2_1{
+    background: yellow;
+    height: 200px;
+    width: 200px; 
+}
+.div3{
+    background:pink;
+    border: 2px dashed black;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px; 
+    margin:20px 0px 20px 0px;
+}  
+table{
+    border: 5px solid black;
+}
+.div5{
+    background:blueviolet;
+    width: 200px;
+    height: 200px;
+}
+.div6{
+    margin:20px;
+    position: relative;
+}
+.div6_1{
+    position: absolute;
+    background: yellow;
+    width: 150px;
+    height:175px ;
+    bottom:7px;
+    left:5px ;
+}
+.div7{
+    width: 200px;
+    height: 200px;
+    outline: 2px solid black;
+    background: lime;   
+    margin-bottom:20px; 
+}
+.div8{
+    width: 200px;
+    height: 200px;
+    background: orange;
+    box-shadow: 2px 2px 0px black, -2px -2px 0px black;   
+}
