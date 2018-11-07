@@ -1,0 +1,25 @@
+.table{
+    border-spacing:3px; 
+    height:500px; 
+}
+.table__first-up{
+    background: rgb(239, 245, 255);
+}
+.table__first-up:hover{
+    background: rgb(185, 185, 185);
+}    
+#tr:nth-child(odd){
+    background: rgb(239, 245, 255);
+}
+#tr:nth-child(even){
+    background: rgb(235, 235, 235);
+}
+#tr:hover{
+    background: rgb(185, 185, 185);
+}
+#td{
+    padding:10px;
+}
+.table__first-up #td{
+    padding:5px 15px 5px 15px;
+}

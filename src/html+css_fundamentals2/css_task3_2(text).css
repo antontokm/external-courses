@@ -1,0 +1,17 @@
+.table{
+    color: rgb(82, 107, 151);
+    font-family:sans-serif;
+}
+.table__first-up{
+    text-transform: uppercase;
+    font-size:12px; 
+    text-align:center;
+    font-weight:bold;
+    height: 20px;
+}
+.table__capitalize{
+    text-transform:capitalize;
+}
+#tr{
+    font-size:14px;
+}
