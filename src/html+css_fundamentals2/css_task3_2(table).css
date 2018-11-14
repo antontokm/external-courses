@@ -8,16 +8,16 @@
 .table__first-up:hover{
     background: rgb(185, 185, 185);
 }    
-#tr:nth-child(odd){
+.table tr:nth-child(odd){
     background: rgb(239, 245, 255);
 }
-#tr:nth-child(even){
+.table tr:nth-child(even){
     background: rgb(235, 235, 235);
 }
-#tr:hover{
+.table tr:hover{
     background: rgb(185, 185, 185);
 }
-#td{
+.table td{
     padding:10px;
 }
 .table__first-up #td{

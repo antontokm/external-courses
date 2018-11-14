@@ -12,6 +12,6 @@
 .table__capitalize{
     text-transform:capitalize;
 }
-#tr{
+.table tr{
     font-size:14px;
 }
