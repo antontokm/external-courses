@@ -65,6 +65,7 @@
             .menu__main-word:first-child{
                 color: rgb(89, 168, 241);
                 display:flex;
+                position: relative;
                 flex-direction: column;
                 justify-content:center;
             }
@@ -74,6 +75,8 @@
                border-left: 15px solid transparent;
                border-right: 15px solid transparent;
                border-bottom: 10px solid rgb(89, 168, 241);
+               position:absolute;
+               bottom:0px;
             }
         .menu__search{
             font-size:12px;
