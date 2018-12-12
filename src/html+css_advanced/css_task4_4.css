@@ -1,6 +1,8 @@
 .box{
     display:flex;
     flex-direction: column;
+    font-family: sans-serif;
+    font-size:14px;
 }
 .box__header{
     height:50px;
@@ -39,19 +41,170 @@
         border-radius:5px;
     }
 .box__mid{
-    height:800px;
-    border:1px solid black;
+    display:flex;
 }
     .box__mid-sidebar{
-        border:1px solid black;
-        height:800px;
         width:200px;
+        background:rgb(29, 29, 29);
+        display:flex;
+        flex-direction: column;
     }
+        .box__mid-sidebar-addBook{
+            height:100px;
+            width:200px;
+            background:rgba(67, 67, 85, 0.986);
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+            .box__mid-sidebar-addBook div{
+                width:150px;
+                height:50px;
+                background:rgb(255, 123, 0);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:white;
+                border-radius: 5px;
+            }
+        .box__mid-sidebar-menu1{
+            margin:5px 0px 5px 0px;
+            background: rgba(67, 67, 85, 0.986);
+            color:rgb(129, 134, 160);
+            display: flex;
+            flex-direction: column;
+        } 
+            .box__mid-sidebar-menu1-punct{
+                height: 40px;
+                display: flex;
+                align-items: center;
+                padding-left:25px;
+            }  
+            .box__mid-sidebar-menu1-punct:nth-child(2){
+                background:rgb(0, 153, 255);
+                color:white;
+            }
+                .box__mid-sidebar-menu1-punct div{
+                    margin-right:10px;
+                }   
+        .box__mid-sidebar-menu2{
+            height:150px;
+            background: rgba(67, 67, 85, 0.986);
+            color:rgb(129, 134, 160);
+            display: flex;
+            flex-direction: column;
+        }
+            .box__mid-sidebar-menu2 .div{
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding-left:25px;
+            }
+            .red , 
+            .orange ,
+            .blue ,
+            .purple{
+                width:5px;
+                height:5px;
+                border-radius:2.5px;
+                margin-right:15px;
+                margin-left: 5px;
+            }
+            .red{
+                background: red;
+            }
+            .orange{
+                background: orange;
+            }
+            .blue{
+                background: rgb(0, 153, 255);
+            }
+            .purple{
+                background: rgb(66, 5, 66);
+            }
+        .box__mid-sidebar-menu3{
+            margin-top:5px;
+            height:300px;
+            background: rgba(67, 67, 85, 0.986);
+            color:rgb(129, 134, 160);
+            display: flex;
+            flex-direction: column;
+        }   
     .box__mid-main{
-        border:1px solid black;
-        height:800px;
-    }   
+        padding-left:20px;
+    } 
+        .box__mid-main-title{
+            padding-left:10px;
+        }
+        .box__mid-main-menu{
+            display: flex;
+            align-items: center;
+        }
+            .box__mid-main-menu-s{
+                width:35%;
+                display: flex;
+                align-items: center;
+            }  
+            .box__mid-main-menu-sort{
+                padding:5px 10px 5px 10px;
+                color:rgb(129, 134, 160);
+            }
+            .box__mid-main-menu-sort:hover{
+                padding:5px 10px 5px 10px;
+                border-radius: 15px;
+                background:rgb(153, 171, 192);
+                color:white;
+            }
+            .box__mid-main-menu-search{
+                width:65%;
+                display:flex;
+                justify-content:flex-end;
+            }
+                .box__mid-main-menu-search input{
+                    width:400px;
+                    border-radius:25px;
+                    padding:10px 15px 10px 15px;
+                    outline: none;
+                }
+        .box__mid-main-books{
+            display:flex;
+            margin-top:40px;
+            justify-content: space-between;
+            flex-wrap:wrap;
+        }
+            .box__mid-main-books-place{
+                display: flex;
+                flex-direction: column;
+            }
+                .box__mid-main-books-place-name{
+                    padding:10px 0 5px 0;
+                    font-size:18px;
+                }
+                .box__mid-main-books-place-autor{
+                    font-size:13px;
+                    color:rgb(129, 134, 160);
+                    padding-bottom:10px;
+                }
+                .box__mid-main-books-place-point{
+                    margin-bottom:40px;
+                }
 .box__footer{
     height:50px;
-    border:1px solid black;
-}
+    display:flex;
+    justify-content: flex-end;
+    background: rgba(67, 67, 85, 0.986);
+}   
+    .box__footer-help,
+    .box__footer-settings{
+        height:50px;
+        width:50px;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        color:white;
+        font-size:17px;
+    }
+    .box__footer-settings{
+        background: rgb(0, 153, 255);
+    }
