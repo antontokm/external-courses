@@ -10,30 +10,30 @@ function setBookTime (){
 var showFormBtn=document.getElementById('show_form_btn')
 
 var showForm = function (){
-    document.getElementById("form").style.display = "block";
+    document.getElementById("form").style.display = "flex";
 }
 var addBookBtn=document.getElementById('add_book_btn');
 var addBook = function(){
     var book = {
-        name:document.getElementById('Name').value,
-        autor:document.getElementById('Autor').value,
-        img: "1.png",
-        time:setBookTime (),
-        free: true
+        title:document.getElementById('Name').value,
+        author:{ firstName:document.getElementById('first_name').value, 
+                  lastName:document.getElementById('last_name').value },
+        image_url: "1.png",
+        createdAt:setBookTime (),
+        cost: 0
     }    
     model.addBook(book);
     booksListBuilder([book]);
     historyListBuilder(book);
-    console.log(book)
     document.getElementById("form").style.display = "none";
 }
 showFormBtn.addEventListener("click",showForm);
 addBookBtn.addEventListener("click",addBook)
 
 var boxMidMainBooks= document.getElementById('box__mid');
+ 
 
 var books = model.allBooks;
-
 function booksListBuilder(books){
     var booksList = '';
     var currentItem = '';
@@ -41,10 +41,10 @@ function booksListBuilder(books){
         currentItem = `
         <div id="box__mid-main-books-place-${books[i].id}" class="box__mid-main-books-place" >
             <div class="box__mid-main-books-place-img">
-                <img src="${books[i].img}" alt="" width="200px" height="275px">
+                <img src="${books[i].image_url}" alt="" width="200px" height="275px">
             </div>
-            <div class="box__mid-main-books-place-name">${books[i].name}</div>
-            <div class="box__mid-main-books-place-autor">${books[i].autor}</div>
+            <div id="box__mid-main-books-place-name-${books[i].id}" class="box__mid-main-books-place-name">${books[i].title}</div>
+            <div class="box__mid-main-books-place-autor">${books[i].author.firstName +" "+ books[i].author.lastName}</div>
             <div class="box__mid-main-books-place-point">
 
             </div>
@@ -61,7 +61,7 @@ function historyListBuilder(book){
     var historyList = `
         <div class="box__mid-sidebar-menu3-history">
             <div class="clock"><i class="far fa-clock"></i></div>
-            You added ${book.name} by ${book.autor} in ${book.time}
+            You added ${book.title} by ${book.author.firstName +" "+ book.author.lastName} in ${book.createdAt}
         </div>`;
     boxMidSidebarMenu3.innerHTML += historyList ;
 };
@@ -71,7 +71,7 @@ sortByFreeBtn.addEventListener("click",function(){sortByFree(books)});
 
 function sortByFree(books){
     for(var i=0; i<books.length; i++){
-        if(books[i].free===false){
+        if(books[i].cost>0){
             document.getElementById(`box__mid-main-books-place-${books[i].id}`).style.display = "none";
         }
     }
@@ -85,17 +85,26 @@ function showAllBooks (books){
     }
 }    
 
+
+
+
+
+
+
 // var searchBookInput = document.getElementById("search-book-input");
-// searchBookInput.addEventListener("input",function(){searchBook()});
+// searchBookInput.addEventListener("onchange",function() {searchBook()});
+
 // function searchBook(){
 //     var word = document.getElementById('search-book-input').value;
-//     for(var i=0; i<books.length; i++){
-//         for(var j=0; j<word.length; j++){
-//             if(word.charAt(j)===books.name.charAt(j)){
-//                 document.getElementById(`box__mid-main-books-place-${books[i].id}`).style.display = "flex";
-//             } else{
-//                 document.getElementById(`box__mid-main-books-place-${books[i].id}`).style.display = "none";
-//             }   
+//     var filter = word.toUpperCase();
+//     for(var i=0; i<word.length; i++){
+//         var name = document.getElementById(`box__mid-main-books-name-${books[i].id}`)
+//         console.log(word);
+//         console.log(name);
+//         var txtValue = word || name;
+//         if(txtValue .toUpperCase().indexOf(filter) == -1){
+
+//             document.getElementById(`box__mid-main-books-place-${books[i].id}`).style.display="none"
 //         }
 //     }    
 // }

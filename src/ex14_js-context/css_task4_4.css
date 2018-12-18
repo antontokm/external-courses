@@ -147,12 +147,13 @@
         padding-left:20px;
     } 
         .box__mid-main-form{
-            width:220px;
+            width:240px;
             padding:5px;
             background: rgba(67, 67, 85, 0.986);
             color:rgb(129, 134, 160);
             display: none;
             position: absolute;
+            flex-direction: column;
         }
             .box__mid-main-form input{
                 margin:5px;
